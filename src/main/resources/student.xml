@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.corso.java.studentdeparment">
+    <class name="Student" table="Student">
+        <id name="id" column="id_student">
+            <generator class="increment"/>
+        </id>
+        <property name="name"/>
+        <property name="lastName"/>
+        <many-to-one name="Department" class="Department" not-null="true">
+
+        </many-to-one>
+
+    </class>
+</hibernate-mapping>
